@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crush Matchmaker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-gradient"></div>
+  <div class="floating-hearts"></div>
+
+  <main class="app-shell">
+    <header class="app-header glass-card">
+      <h1>Crush Matchmaker</h1>
+      <p>Enter 5 girl names and 5 boy names. Let the universe (and a bit of code) reveal the matches.</p>
+    </header>
+
+    <section class="inputs-section glass-card">
+      <div class="inputs-column">
+        <h2>Girls</h2>
+        <div class="inputs-grid" id="girls-inputs">
+          <input type="text" class="name-input girl" placeholder="Girl 1" />
+          <input type="text" class="name-input girl" placeholder="Girl 2" />
+          <input type="text" class="name-input girl" placeholder="Girl 3" />
+          <input type="text" class="name-input girl" placeholder="Girl 4" />
+          <input type="text" class="name-input girl" placeholder="Girl 5" />
+        </div>
+      </div>
+
+      <div class="inputs-column">
+        <h2>Boys</h2>
+        <div class="inputs-grid" id="boys-inputs">
+          <input type="text" class="name-input boy" placeholder="Boy 1" />
+          <input type="text" class="name-input boy" placeholder="Boy 2" />
+          <input type="text" class="name-input boy" placeholder="Boy 3" />
+          <input type="text" class="name-input boy" placeholder="Boy 4" />
+          <input type="text" class="name-input boy" placeholder="Boy 5" />
+        </div>
+      </div>
+    </section>
+
+    <section class="controls glass-card">
+      <button id="findCrush" class="btn primary">Find Crush</button>
+      <button id="reset" class="btn ghost">Reset</button>
+    </section>
+
+    <section class="results-section">
+      <h2 class="results-title">Match Results</h2>
+      <div id="results" class="results-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
