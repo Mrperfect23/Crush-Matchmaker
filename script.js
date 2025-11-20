@@ -86,6 +86,19 @@ function applyMatchLogic() {
     remainingGirls.splice(idxGirlSakshi, 1);
   }
 
+  const idxBoyHarshitSir = remainingBoys.findIndex(b => normalize(b) === 'harshit sir');
+  const idxGirlAnsupriaa = remainingGirls.findIndex(g => normalize(g) === 'ansupriaa');
+
+  if (idxBoyHarshitSir !== -1 && idxGirlAnsupriaa !== -1) {
+    const harshitSir = remainingBoys[idxBoyHarshitSir];
+    const ansupriaa = remainingGirls[idxGirlAnsupriaa];
+
+    pairings.push({ boy: harshitSir, girl: ansupriaa, special: true });
+
+    remainingBoys.splice(idxBoyHarshitSir, 1);
+    remainingGirls.splice(idxGirlAnsupriaa, 1);
+  }
+
   shuffle(remainingGirls);
   shuffle(remainingBoys);
 
