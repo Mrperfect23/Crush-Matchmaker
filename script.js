@@ -74,16 +74,16 @@ function applyMatchLogic() {
   let remainingBoys = boys.slice();
 
   const idxBoySanchit = remainingBoys.findIndex(b => normalize(b) === 'sanchit');
-  const idxGirlSakshi = remainingGirls.findIndex(g => normalize(g) === 'sakshi');
+  const idxGirlsakshii = remainingGirls.findIndex(g => normalize(g) === 'sakshii');
 
-  if (idxBoySanchit !== -1 && idxGirlSakshi !== -1) {
+  if (idxBoySanchit !== -1 && idxGirlsakshii !== -1) {
     const sanchit = remainingBoys[idxBoySanchit];
-    const sakshi = remainingGirls[idxGirlSakshi];
+    const sakshii = remainingGirls[idxGirlsakshii];
 
-    pairings.push({ boy: sanchit, girl: sakshi, special: true });
+    pairings.push({ boy: sanchit, girl: sakshii, special: true });
 
     remainingBoys.splice(idxBoySanchit, 1);
-    remainingGirls.splice(idxGirlSakshi, 1);
+    remainingGirls.splice(idxGirlsakshii, 1);
   }
 
   const idxBoyHarshitSir = remainingBoys.findIndex(b => normalize(b) === 'harshit sir');
@@ -126,3 +126,4 @@ resetBtn.addEventListener('click', () => {
   boysInputs.forEach(i => (i.value = ''));
   clearResults();
 });
+
